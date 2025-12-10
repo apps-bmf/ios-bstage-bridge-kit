@@ -11,7 +11,7 @@ let package = Package(
         ),
     ],
     dependencies: [
-        // MLKit 의존성들은 binaryTarget으로 포함
+        .package(url: "git@github.com:apps-bmf/amazon-ivs-spm.git", branch: "main"),
     ],
     targets: [
         // MLKit xcframework들을 binaryTarget으로 포함
@@ -46,6 +46,23 @@ let package = Package(
             checksum: "aa9158109eaf66a104e9307b4edb9896f12559640b7426e119481e369d2c6f04"
         ),
         
+        // Amazon IVS xcframework들을 binaryTarget으로 포함
+        .binaryTarget(
+            name: "AmazonIVSBroadcast",
+            url: "https://broadcast.live-video.net/1.27.0/AmazonIVSBroadcast.xcframework.zip",
+            checksum: "46f5ae81871437f4853ae664b5a5ce4eef59a60315e291cbc93a79d785049a59"
+        ),
+        .binaryTarget(
+            name: "AmazonIVSBroadcastStages",
+            url: "https://broadcast.live-video.net/1.27.0/AmazonIVSBroadcast-Stages.xcframework.zip",
+            checksum: "9b39a0fbe378ba1565f149829244a27d0efa4841444c58112b75f1a45d2df8ab"
+        ),
+        .binaryTarget(
+            name: "AmazonIVSPlayer",
+            url: "https://player.live-video.net/1.43.0/AmazonIVSPlayer.xcframework.zip",
+            checksum: "24cf5d8c7f74e036f1310bed94ca640222f1d7d39d852c40dd05b14606465862"
+        ),
+        
         // Wrapper 타겟 - 리소스 번들을 포함
         .target(
             name: "BstageBridgeKit",
@@ -56,6 +73,9 @@ let package = Package(
                 "MLKitNaturalLanguage",
                 "GoogleToolboxForMac",
                 "GoogleUtilitiesComponents",
+                "AmazonIVSBroadcast",
+                "AmazonIVSBroadcastStages",
+                "AmazonIVSPlayer",
             ],
             resources: [
                 // 리소스 번들을 여기에 포함
