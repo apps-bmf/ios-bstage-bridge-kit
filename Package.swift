@@ -10,18 +10,18 @@ let package = Package(
             targets: ["BstageBridgeKit"]
         ),
         // Amazon IVS products를 외부에서 직접 사용할 수 있도록 노출
-        .library(
-            name: "AmazonIVSBroadcast",
-            targets: ["AmazonIVSBroadcast"]
-        ),
-        .library(
-            name: "AmazonIVSBroadcastStages",
-            targets: ["AmazonIVSBroadcastStages"]
-        ),
-        .library(
-            name: "AmazonIVSPlayer",
-            targets: ["AmazonIVSPlayer"]
-        ),
+        // .library(
+        //     name: "AmazonIVSBroadcast",
+        //     targets: ["AmazonIVSBroadcast"]
+        // ),
+        // .library(
+        //     name: "AmazonIVSBroadcastStages",
+        //     targets: ["AmazonIVSBroadcastStages"]
+        // ),
+        // .library(
+        //     name: "AmazonIVSPlayer",
+        //     targets: ["AmazonIVSPlayer"]
+        // ),
     ],
     dependencies: [],
     targets: [
