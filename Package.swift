@@ -10,9 +10,7 @@ let package = Package(
             targets: ["BstageBridgeKit"]
         ),
     ],
-    dependencies: [
-        .package(url: "git@github.com:apps-bmf/amazon-ivs-spm.git", branch: "main"),
-    ],
+    dependencies: [],
     targets: [
         // MLKit xcframework들을 binaryTarget으로 포함
         .binaryTarget(
