@@ -82,10 +82,7 @@ let package = Package(
                 "MLKitLanguageID",
                 "MLKitNaturalLanguage",
                 "GoogleToolboxForMac",
-                "GoogleUtilitiesComponents",
-                "AmazonIVSBroadcast",
-                "AmazonIVSBroadcastStages",
-                "AmazonIVSPlayer",
+                "GoogleUtilitiesComponents"
             ],
             resources: [
                 // 리소스 번들을 여기에 포함
